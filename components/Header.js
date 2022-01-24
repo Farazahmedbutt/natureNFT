@@ -1,17 +1,20 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { AiOutlineMenu, AiFillFacebook, AiOutlineClose } from "react-icons/ai";
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaTwitterSquare, FaDiscord } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
+import Link from "next/link";
+import { useRouter } from "next/router";
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Gallery", href: "#", current: false },
+  { id: 1, name: "Home", href: "/" },
+  { id: 2, name: "Gallery", href: "/gallery" },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 function Header() {
+  const router = useRouter();
   return (
     <Disclosure
       as="nav"
@@ -39,11 +42,12 @@ function Header() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
-                  <p className="text-xl md:text-2xl text-white font-bold">
-                    <span className="text-sky-400">APE</span> SHIBANATI
-                  </p>
-                  {/* <img
+                <div className="flex-shrink-0 flex items-center cursor-pointer">
+                  <Link href="/">
+                    <p className="text-xl md:text-2xl text-white font-bold">
+                      <span className="text-sky-400">APE</span> SHIBANATI
+                    </p>
+                    {/* <img
                     className="block lg:hidden h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                     alt="APESHIBANATI"
@@ -53,28 +57,27 @@ function Header() {
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                     alt="APESHIBANATI"
                   /> */}
+                  </Link>
                 </div>
                 <div className="hidden sm:block sm:ml-6 flex-grow text-center">
-                  <div className="flex flex-grow justify-center space-x-4">
+                  <div className="flex flex-grow justify-center space-x-4 text-white ">
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? "text-white"
-                            : "text-gray-300 hover:text-white",
-                          "px-3 py-2  text-sm font-medium border-b-2 border-transparent hover:border-sky-400"
-                        )}
-                        aria-current={item.current ? "page" : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} key={item.name}>
+                        <a
+                          className={`${
+                            router.pathname === item.href
+                              ? "border-sky-400"
+                              : ""
+                          } px-3 py-2 text-sm font-medium border-b-2 border-transparent hover:border-sky-400`}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 text-2xl text-white  transition duration-100 gap-5">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 text-2xl text-white  transition duration-100 gap-2 md:gap-5">
                 <a className=" hover:text-sky-400" href="#">
                   <AiFillFacebook className=" " />
                 </a>
@@ -84,6 +87,9 @@ function Header() {
                 <a className="hover:text-sky-400" href="#">
                   <FiInstagram />
                 </a>
+                <a className="hover:text-sky-400" href="#">
+                  <FaDiscord />
+                </a>
               </div>
             </div>
           </div>
@@ -91,19 +97,19 @@ function Header() {
           <Disclosure.Panel className="sm:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
+                <Disclosure.Button key={item.name}>
+                  <Link href={item.href}>
+                    <a
+                      className={classNames(
+                        router.pathname === item.href
+                          ? "bg-gray-900 text-white w-full"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "block px-3 py-2 rounded-md text-base font-medium"
+                      )}
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
                 </Disclosure.Button>
               ))}
             </div>

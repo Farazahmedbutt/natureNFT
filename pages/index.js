@@ -12,7 +12,6 @@ export default function Home() {
         <title>APESHIBANATI NFT</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Welcome />
       <Migration />
       <Story />
