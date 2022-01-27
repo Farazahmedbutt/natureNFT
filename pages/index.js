@@ -7,15 +7,14 @@ import Roadmap from "../components/Roadmap";
 
 export default function Home() {
   return (
-    <>
+    <div className="font-Dongle">
       <Head>
-        <title>APESHIBANATI NFT</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Nature NFT</title>
       </Head>
       <Welcome />
       <Migration />
       <Story />
       <Roadmap />
-    </>
+    </div>
   );
 }

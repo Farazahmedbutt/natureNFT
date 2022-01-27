@@ -6,13 +6,21 @@ module.exports = {
   ],
 
   theme: {
+    backgroundImage: {
+      mountain: "url('/img/mountain.svg')",
+      tree: "url('/img/tree.svg')",
+      moon: "url('/img/moon.svg')",
+    },
+
     extend: {
       fontFamily: {
-        oswald: ["oswald", "sans-serif"],
+        Dongle: ["Mali", "cursive"],
       },
-      backgroundImage: {
-        "split-white-black":
-          "linear-gradient(to right , gray-900 60% , #38bdf8 40%);",
+      colors: {
+        nature: "#AEC23F",
+        soil: "#694612",
+        brown: "#452E0B",
+        grass: "#355B1C",
       },
     },
   },

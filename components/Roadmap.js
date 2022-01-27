@@ -5,49 +5,49 @@ const roadmap = [
     id: 1,
     title: "Sale Event",
     description:
-      "Launching our collection of 10000 Apeshib on our website. Please use only the link provided by our social media account or in Discord. The return of our holders is our top priority, so we have spent an immense amount of time to provide our holders with the most gas-efficient ERC-1155 token possible.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 2,
     title: "Earnings",
     description:
-      "Each NFT holder will be earning 100 Apeseed everyday for the next 5 years.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 3,
     title: "Discovery",
     description:
-      "After the reveal of the artwork, you will be able to know which character, planets, and clothing style you successfully minted. The rarity rank of your NFT will be directly available across the main two rarity services available – Rarity Tools and Rarity Sniper.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 4,
     title: "Stepping into the Metaverse",
     description:
-      "Our goal is to build a complete ecosystem around the metaverse and Defi with a playful heart. We will be using the community fund to buy properties in the Sandbox and Decentraland to offer a ground of exchange for owners to mingle and profit from the metaverse.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 5,
     title: "Launching the Apeshib Swap",
     description:
-      "The Apeshib Swap is the DEX of our own. NFT holders can utilize the APESEED token rewarded by holding the NFT and trade in our DEX.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 6,
     title: "Launching the Merch Collection",
     description:
-      "After the reveal of the artwork, you will be able to know which character, planets, and clothing style you successfully minted. The rarity rank of your NFT will be directly available across the main two rarity services available – Rarity Tools and Rarity Sniper.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.",
   },
   {
     id: 7,
     title: "Launching a Venture Capital",
     description:
-      "We would set aside a portion of the fund gained from NFT sale, Apeshib Swap and Metaverse profit to launch a Venture Capital. We truly believe in NFT and metaverse so we would like to put the focus of our VC on these areas. We will be investing in potential projects with our own A tokens. We let holders participate in VC investing just like how you participate in crowdfunding. Holders can stake their APESEED tokens until we exit the investment opportunity. Profits will be split amongst investors.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque..",
   },
   {
     id: 8,
     title: "Expand our community",
     description:
-      "We are a member-centric community and we would seek ways to be more inclusive for new joiners to participate in the Apeshibanati. We hope to help Apeseed expand popularity and expand the Apeshibanati into a bigger community. At this point we will be unlocking the breeding functions and new joiner can participate by owning our next gen of Apeshib. Utility of the next gen Apeshib will be further revealed.",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae tempore aut sequi minus praesentium incidunt cumque iure minima repudiandae, suscipit officiis eveniet dolorum, quos a neque soluta commodi est itaque.s",
   },
 ];
 
@@ -96,11 +96,9 @@ const roadLinkV = {
 
 function Roadmap() {
   return (
-    <div className="bg-gray-900 font-oswald">
+    <div className="bg-soil font-oswald">
       <div className="max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto py-10 text-center text-white">
-        <h2 className="text-5xl">
-          <span className=" text-sky-500">APESHIBANATI</span> Roadmap
-        </h2>
+        <h2 className="text-5xl font-semibold">ROADMAP</h2>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -121,14 +119,14 @@ function Roadmap() {
               }}
               className="relative z-20"
             >
-              <div className="text-left p-4 bg-gray-800 bg-opacity-95 backdrop-blur-sm rounded-md shadow-sm h-full">
+              <div className="text-left p-4 bg-brown bg-opacity-90 backdrop-blur-sm rounded-md shadow-sm h-full">
                 <p className="font-bold text-lg font-oswald text-gray-100">
                   {r.title}
                 </p>
-                <p className="text-gray-400 text-sm">{r.description}</p>
+                <p className="text-gray-300 text-sm">{r.description}</p>
               </div>
               {r.id !== 8 && (
-                <motion.div className="w-12 h-2 bg-sky-400 absolute rotate-90 left-1/2 -bottom-[30px] -translate-x-1/2 lg:hidden"></motion.div>
+                <motion.div className="w-12 h-2 bg-nature absolute rotate-90 left-1/2 -bottom-[30px] -translate-x-1/2 lg:hidden"></motion.div>
               )}
               {r.id !== 3 && r.id !== 6 && r.id !== 8 && (
                 <motion.div
@@ -147,7 +145,7 @@ function Roadmap() {
                       (r.id == 7 && "2"),
                     duration: "0.5",
                   }}
-                  className="w-28 h-2 bg-sky-400 absolute  -right-24 top-1/2 hidden lg:block -z-20"
+                  className="w-28 h-2 bg-nature absolute  -right-24 top-1/2 hidden lg:block -z-20"
                 ></motion.div>
               )}
               {r.id === 3 && (
@@ -160,7 +158,7 @@ function Roadmap() {
                     delay: "2",
                     duration: "0.5",
                   }}
-                  className="w-28 h-2 bg-sky-400 rotate-90  absolute hidden lg:block  -translate-x-1/2 trans left-1/2 top-[128%] -z-20"
+                  className="w-28 h-2 bg-nature rotate-90  absolute hidden lg:block  -translate-x-1/2 trans left-1/2 top-[128%] -z-20"
                 ></motion.div>
               )}
               {r.id === 4 && (
@@ -173,7 +171,7 @@ function Roadmap() {
                     delay: "2.5",
                     duration: "0.5",
                   }}
-                  className="w-28 h-2 bg-sky-400 rotate-90  absolute hidden lg:block  -translate-x-1/2 trans left-1/2 top-[131%] -z-20"
+                  className="w-28 h-2 bg-nature rotate-90  absolute hidden lg:block  -translate-x-1/2 trans left-1/2 top-[131%] -z-20"
                 ></motion.div>
               )}
             </motion.div>

@@ -9,15 +9,17 @@ import Image from "next/image";
 SwiperCore.use([Autoplay]);
 function Story() {
   return (
-    <div className=" bg-gray-900 font-oswald ">
+    <div className=" bg-nature  bg-gras bg-no-repeat bg-bottom py-20">
       <div className=" max-w-md md:max-w-3xl lg:max-w-5xl xl:max-w-7xl mx-auto py-10 text-center text-white">
-        <h2 className="text-5xl">Story</h2>
-        <p className=" text-xl my-10 font-oswald z-2">
-          For centuries, the apeshib believe that in order to thrive, they have
-          to explore planets beyond the earth. To embark on space travel, the
-          Apeshib has gathered a group of rocket scientists and bioengineers for
-          R&D. After decades of effort, the apeshib has successfully made it to
-          different planets in the solar system.
+        <h2 className="text-5xl font-semibold ">STORY</h2>
+        <p className=" text-xl my-10  z-2">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          molestias reprehenderit veritatis earum temporibus hic, tenetur
+          ducimus ab sunt nemo, vitae incidunt iure molestiae corporis
+          assumenda? Temporibus voluptates ea a! Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Unde labore porro saepe natus neque
+          velit veniam. Unde, reprehenderit! Asperiores minus quidem ex
+          voluptatem soluta numquam aliquid fugiat quibusdam cumque neque.
         </p>
 
         <Swiper
@@ -49,44 +51,17 @@ function Story() {
           pagination={{
             clickable: true,
           }}
-          className="mySwiper"
+          className="mySwiper cursor-pointer"
         >
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape} objectFit="cover" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={ape2} objectFit="cover" />
-          </SwiperSlide>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((e) => (
+            <SwiperSlide key={e}>
+              <Image
+                className="rounded-md"
+                src={e % 2 == 0 ? ape : ape2}
+                objectFit="cover"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
